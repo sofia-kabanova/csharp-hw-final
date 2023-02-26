@@ -19,24 +19,23 @@ int Akkerman(int m, int n)
     else
         return Akkerman(m - 1, Akkerman(m, n - 1));
 }
+void Note1(string note1)
+{
+    Console.WriteLine(note1);
+}
+void Note2(string note2)
+{
+    Console.WriteLine(note2);
+}
+Console.WriteLine("Вычисляем функцию Аккермана.");
 Console.WriteLine("Введите два положительных числа: M и N.");
 int m = InputInt("Введите M: ");
 int n = InputInt("Введите N: ");
-if (m < 0 & n >= 0)
-{
-    Console.WriteLine("Вы ввели отрицательное число.");
-    Console.WriteLine("Перезапустите программу и повторите ввод");
-}
-else if (m >= 0 & n < 0)
-{
-    Console.WriteLine("Вы ввели отрицательное число.");
-    Console.WriteLine("Перезапустите программу и повторите ввод");
-}
-else if (m < 0 & n < 0)
-{
-    Console.WriteLine("Вы ввели отрицательные числа.");
-    Console.WriteLine("Перезапустите программу и повторите ввод");
-}
+string note1 = ("Вы ввели отрицательное число, перезапустите программу!");
+string note2 = ("Вы ввели отрицательные числа, перезапустите программу!");
+if (m < 0 & n >= 0) Note1(note1);
+else if (m >= 0 & n < 0) Note1(note1);
+else if (m < 0 & n < 0) Note2(note2);
 else
 {
     Console.WriteLine($"A({m}, {n}) = {Akkerman(m, n)}");

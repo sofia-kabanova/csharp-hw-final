@@ -18,11 +18,12 @@ int NaturalNumber(int n, int m)
         Console.Write($"{NaturalNumber(n, m + 1)}, ");
     return m;
 }
-int n = InputInt("Введите положительное число: ");
+Console.WriteLine("Находим все натуральные числа в промежутке от N до 1.");
+int n = InputInt("Введите положительное число N: ");
 int m = 1;
 if (n < 1)
 {
-    Console.WriteLine("Ввели не положительное число. Перезапустите программу.");
+    Console.WriteLine("Вы ввели не положительное число. Перезапустите программу.");
 }
 else
 {

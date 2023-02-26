@@ -17,6 +17,14 @@ int CountNaturalSum(int m, int n)
         return n;
     return n + CountNaturalSum(m, n - 1);
 }
+Console.WriteLine($"Вычисляем сумму натуральных элементов от M до N.");
 int m = InputInt("Введите M: ");
 int n = InputInt("Введите N: ");
-Console.WriteLine($"Сумма элементов от {m} до {n} = {CountNaturalSum(m, n)}");
+if (m <= n)
+{
+    Console.WriteLine($"Сумма натуральных элементов от {m} до {n} = {CountNaturalSum(m, n)}");
+}
+else
+{
+    Console.WriteLine($"{m} больше {n}, вычисление невозможно, перезапустите программу!");
+}
